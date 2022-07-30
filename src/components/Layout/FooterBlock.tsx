@@ -1,12 +1,11 @@
 import React from 'react';
-import { css } from '@emotion/react';
 
 export const FooterBlock = () => {
-  const FooterBlockStyle = css``;
+  const FooterBlockStyle = ``;
 
   return (
     <>
-      <footer css={FooterBlockStyle}>푸터</footer>
+      <footer className={FooterBlockStyle}>푸터</footer>
     </>
   );
 };

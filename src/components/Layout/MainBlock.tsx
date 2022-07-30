@@ -1,13 +1,12 @@
 import React from 'react';
-import { css } from '@emotion/react';
 import { IHaveChildren } from '@/types';
 
 export const MainBlock = ({ children, }: IHaveChildren) => {
-  const MainBlockStyle = css``;
+  const MainBlockStyle = ``;
 
   return (
     <>
-      <main css={MainBlockStyle}>
+      <main className={MainBlockStyle}>
         {children}
       </main>
     </>

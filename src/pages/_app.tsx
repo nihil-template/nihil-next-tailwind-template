@@ -2,8 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-import { GlobalStyles } from 'twin.macro';
 import { store } from '@/store';
+
+import '@/styles/font.styles.css';
+import '@/styles/global.css';
 
 const App = ({ Component, pageProps, }: AppProps) => (
   <>
@@ -16,7 +18,6 @@ const App = ({ Component, pageProps, }: AppProps) => (
           content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'
         />
       </Head>
-      <GlobalStyles />
       <Component {...pageProps} />
     </Provider>
   </>

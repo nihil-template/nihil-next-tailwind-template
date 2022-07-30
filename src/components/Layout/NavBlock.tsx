@@ -1,12 +1,11 @@
 import React from 'react';
-import { css } from '@emotion/react';
 
 export const NavBlock = () => {
-  const NavBlockStyle = css``;
+  const NavBlockStyle = ``;
 
   return (
     <>
-      <nav css={NavBlockStyle}>내비</nav>
+      <nav className={NavBlockStyle}>내비</nav>
     </>
   );
 };

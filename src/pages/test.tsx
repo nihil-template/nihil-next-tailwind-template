@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import { css } from '@emotion/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '@/store';
 import { ChangeWord } from '@/reducers/TestReducer';
@@ -12,17 +11,14 @@ const IndexPage = () => {
     dispatch(ChangeWord());
   }, [ word, ]);
 
-  const IndexPageStyle = css`
-    padding: 10px;
-    background-color: #333333;
-    color: #ffffff;
-    margin-bottom: 10px;
-  `;
+  const IndexPageStyle = `p-[10px] bg-[#333333] text-white mb-[10px]`;
+
+  const buttonStyle = `block text-center mx-auto p-[10px] bg-[#ffffff] text-[#333333] border-1 border-[#33333330] shadow-lg shadow-[#33333350] rounded-[10px] hover:text-white hover:bg-[#333333]`;
 
   return (
     <>
-      <div css={IndexPageStyle}>Hello {word}!!</div>
-      <button type='button' onClick={onClickButton}>
+      <div className={IndexPageStyle}>Hello {word}!!</div>
+      <button type='button' className={buttonStyle} onClick={onClickButton}>
         클릭해서 변경
       </button>
     </>

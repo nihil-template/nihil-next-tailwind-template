@@ -1,12 +1,11 @@
 import React from 'react';
-import { css } from '@emotion/react';
 
 export const HeaderBlock = () => {
-  const HeaderBlockStyle = css``;
+  const HeaderBlockStyle = ``;
 
   return (
     <>
-      <header css={HeaderBlockStyle}>헤더</header>
+      <header className={HeaderBlockStyle}>헤더</header>
     </>
   );
 };
