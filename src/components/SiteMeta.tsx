@@ -1,14 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { siteData } from '@/data';
-
-export interface ISiteMeta {
-  title: string;
-  url: string;
-  description?: string;
-  keywords?: string;
-  type?: string;
-}
+import { ISiteMeta } from '@/hooks';
 
 interface ISiteMetaProps {
   meta: ISiteMeta;

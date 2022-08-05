@@ -1,8 +1,9 @@
 import React from 'react';
-import { ISiteMeta, SiteMeta } from '@/components';
+import { SiteMeta } from '@/components';
 import {
   FooterBlock, HeaderBlock, MainBlock, NavBlock
 } from '@/components/Layout';
+import { ISiteMeta } from '@/hooks';
 
 interface IAppLayoutProps {
   children: React.ReactNode;
