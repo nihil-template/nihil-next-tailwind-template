@@ -1,7 +1,10 @@
 import React from 'react';
-import { IHaveChildren } from '@/types';
 
-export const MainBlock = ({ children, }: IHaveChildren) => {
+interface IMainBlockProps {
+  children: React.ReactNode;
+}
+
+export const MainBlock = ({ children, }: IMainBlockProps) => {
   const MainBlockStyle = ``;
 
   return (

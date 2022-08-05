@@ -1,13 +1,21 @@
-import { IConfig } from '@/types';
+export interface IConfig {
+  title: string;
+  description: string;
+  url: string;
+  type: string;
+  image: string;
+  keywords: string;
+  version: string;
+}
 
 export const siteData: IConfig = {
-  siteTitle: '사이트 이름',
-  siteDescription: '',
-  siteKeywords: '',
-  siteType: 'website',
-  siteUrl: process.env.NODE_ENV === 'development'
+  title: '사이트 이름',
+  description: '',
+  keywords: '',
+  type: 'website',
+  url: process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
     : '',
-  siteImage: '',
-  siteVersion: 'v0.0.0',
+  image: '',
+  version: 'v0.0.0',
 };

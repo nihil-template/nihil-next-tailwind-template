@@ -1,19 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
-import { ISiteMetaProps } from '@/types';
 import { siteData } from '@/data';
+
+export interface ISiteMeta {
+  title: string;
+  url: string;
+  description?: string;
+  keywords?: string;
+  type?: string;
+}
+
+interface ISiteMetaProps {
+  meta: ISiteMeta;
+}
 
 export const SiteMeta = ({ meta, }: ISiteMetaProps) => {
   const {
     title, url, description, keywords, type,
   } = meta;
 
-  const siteTitle = `${title} - ${siteData.siteTitle}`;
-  const siteDescription = description || siteData.siteDescription;
-  const siteURL = `${siteData.siteUrl}${url}`;
-  const siteKeywords = keywords || siteData.siteKeywords;
-  const siteImage = `${siteData.siteUrl}${siteData.siteImage}`;
-  const siteType = type || siteData.siteType;
+  const siteTitle = `${title} - ${siteData.title}`;
+  const siteDescription = description || siteData.description;
+  const siteURL = `${siteData.url}${url}`;
+  const siteKeywords = keywords || siteData.keywords;
+  const siteImage = `${siteData.url}${siteData.image}`;
+  const siteType = type || siteData.type;
 
   const author = 'NIHILncunia';
 
@@ -28,7 +39,7 @@ export const SiteMeta = ({ meta, }: ISiteMetaProps) => {
         <link rel='canonical' href={siteURL} />
 
         {/* 오픈그래프 */}
-        <meta property='og:site_name' content={siteData.siteTitle} />
+        <meta property='og:site_name' content={siteData.title} />
         <meta property='og:type' content={siteType} />
         <meta property='og:title' content={siteTitle} />
         <meta property='og:description' content={siteDescription} />

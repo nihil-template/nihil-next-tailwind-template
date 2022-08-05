@@ -1,11 +1,15 @@
 import React from 'react';
-import { SiteMeta } from '@/components';
-import { ISiteMetaProps } from '@/types';
+import { ISiteMeta, SiteMeta } from '@/components';
 import {
   FooterBlock, HeaderBlock, MainBlock, NavBlock
 } from '@/components/Layout';
 
-const AppLayout = ({ children, meta, }: ISiteMetaProps) => {
+interface IAppLayoutProps {
+  children: React.ReactNode;
+  meta: ISiteMeta;
+}
+
+const AppLayout = ({ children, meta, }: IAppLayoutProps) => {
   return (
     <>
       <SiteMeta meta={meta} />
