@@ -4,8 +4,7 @@ import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 
-import '@/styles/font.styles.css';
-import '@/styles/global.styles.css';
+import '@/styles/tailwind.css';
 
 const App = ({ Component, pageProps, }: AppProps) => (
   <>
